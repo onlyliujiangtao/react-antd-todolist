@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    background-color: #CDCDCD;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    padding: 0 27.5px;
+    background-color: #333;
+}
+
+.logo {
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: white;
+}
+
+.content {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listItem {
+    border-left: 3px solid green;
+    padding: 0 10px;
+    border-radius: 4px;
+    height: 33px;
+    background-color: #fff;
+    cursor: move;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width:620px) {
+    .content {
+        width: 600px;
+    }
+}
+
+.addInput {
+    width: 60%;
+}
+
+.num {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #E6E6FA;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.del {
+    display: block;
+    width: 14px;
+    height: 12px;
+    border-radius: 14px;
+    border: 5px double #CCC;
+    background: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.ml10{
+  margin-left: 10px;
+}
+.checked{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.finish .listItem{
+  border-left: 3px solid #aaa;
+  background-color: #e0e0e0;
+  cursor: auto;
+}
