@@ -19,6 +19,9 @@
 + 注意：组件所必不可少的核心函数；不能在该函数中修改状态机state
 
 ## `componentDidMount()`
++ 执行时间：render之后被调用，并且仅调用一次
++ 作用：渲染挂载组件；可以使用refs（备注：React支持一个特殊的属性，你可以将这个属性加在任何通过render()返回的组件中。这也就是说对render()返回的组件进行一个标记，可以方便的定位的这个组件实例。）
++ 注意：子组件也有该函数，在父组件的该函数调用前被调用；如果在该函数中修改某些状态机state，会重新渲染render组件，所以有些组件为减少渲染次数，可以将某些修改状态机的操作放在componentWillMount函数中；如果需要再程序启动显示初始化页面后从网路获取数据，可以将网络请求代码放在该函数中
 
 ># state和props更新重新渲染执行顺序
 + shouldComponentUpdate(nextProps, nextState)
@@ -26,6 +29,17 @@
 + render
 + componentDidUpdate
 ![](images/react-update.png)
+## `shouldComponentUpdate(nextProps, nextState)`
++ 执行时间：组件挂载后（即执行完render），接收到新的state或props时被调用，即每次执行setstate都会执行该函数，来判断是否重新render组件，默认返回true；接收两个参数：第一个是心的props，第二个是新的state。
++ 作用：如果有些变化不需要重新render组件，可以在该函数中阻拦
++ 注意：该方法在初始化渲染的时候不会调用，在使用 forceUpdate 方法的时候也不会
+## `componentWillUpdate`
++ 执行时间：在接收到新的props 或者 state，重新渲染 之前立刻调用，在初始化渲染的时候该方法不会被调用
++ 作用：为即将发生的重新渲染做一些准备工作
++ 注意：不能再该函数中通过this.setstate再次改变状态机，如果需要，则在componentWillReceiveProps函数中改变
+## `componentDidUpdate`
++ 执行时间：重新渲染后调用，在初始化渲染的时候该方法不会被调用
++ 作用：使用该方法可以在组件更新之后操作DOM 元素
 
 ># 组件渲染后，当组件接收到新的props时被调用
 ## `componentWillReceiveProps(nextProps)`
