@@ -109,6 +109,7 @@ class Todolist extends React.Component {
                         <Input className="addInput" placeholder="添加ToDo" onPressEnter={this.keyEnter.bind(this)} />
                     </div>
                 </div>
+                <div className="h50"></div>
                 <div className="comming content">
                     <div className="title space-between">
                         <h1>正在进行</h1>
@@ -120,7 +121,7 @@ class Todolist extends React.Component {
                 </div>
                 <div className="finish content">
                     <div className="title space-between">
-                        <h1>正在进行</h1>
+                        <h1>已完成</h1>
                         <span className="num center">{this.state.finish}</span>
                     </div>
                     <ul>
