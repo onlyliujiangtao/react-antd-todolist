@@ -87,9 +87,9 @@ class Todolist extends React.Component {
         return this.state.todoList.map((item, index) => {
             if (item.flag === flag) {
                 return (<li key={index} className="listItem space-between" onDrop={this.drop.bind(this,index)} onDragOver={this.allowDrop} draggable={!flag} onDragStart={this.drag.bind(this,index)} >
-                            <div className="center">
+                            <div>
                                 <input type="checkbox" className="checked" onChange={this.changeFlag.bind(this,index)} defaultChecked={item.flag} />
-                                <span className="ml10">{item.text}</span>
+                                <span className="ml10 context" title={item.text}>{item.text}</span>
                             </div>
                             <span className="del" onClick={this.delItem.bind(this,index)}></span>
                         </li>)
