@@ -15,7 +15,10 @@ body,
     width: 100%;
     padding: 0 27.5px;
     background-color: #333;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    }
 
 .logo {
     padding: 0;
@@ -93,4 +96,7 @@ body,
   border-left: 3px solid #aaa;
   background-color: #e0e0e0;
   cursor: auto;
+}
+.comming {
+    margin-top: 50px;
 }
