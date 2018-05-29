@@ -1,5 +1,7 @@
 ## 介绍
 借antd学习react，写一个todolist小demo
+## 预览
+https://onlyliujiangtao.github.io/react-antd-todolist/
 ## 安装
 需要环境 nodejs, npm
 * https://nodejs.org/en/ 下载安装node.js  如果已经安装略过
